@@ -1,0 +1,22 @@
+<div class="toolbar" fxLayout="row" fxLayoutAlign="space-between">
+  <div fxLayout="row" fxLayoutAlign="start center">
+    <am-toolbar-sidenav-mobile-toggle></am-toolbar-sidenav-mobile-toggle>
+
+    <img class="logo" [routerLink]="['/']" fxHide.gt-md fxHide.xs
+         style="height: 35px; margin-left: 24px; margin-bottom: -5px;"
+         src="assets/img/logo_dark.png">
+
+    <am-toolbar-search-bar fxFlex="500px" fxHide fxShow.gt-md></am-toolbar-search-bar>
+  </div>
+
+  <div fxLayout="row">
+
+    <am-toolbar-fullscreen-toggle class="button"></am-toolbar-fullscreen-toggle>
+
+    <am-toolbar-search class="button"></am-toolbar-search>
+
+    <am-toolbar-notifications class="button"></am-toolbar-notifications>
+
+    <am-toolbar-user-button class="button"></am-toolbar-user-button>
+  </div>
+</div>

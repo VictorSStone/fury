@@ -1,0 +1,32 @@
+<am-loading-indicator></am-loading-indicator>
+
+<mat-drawer-container class="layout-container">
+
+  <mat-drawer-content class="drawer-content">
+    <am-backdrop></am-backdrop>
+
+    <div class="wrapper" fxFlex="grow" fxLayout="row">
+      <!-- SIDENAV -->
+      <am-sidenav class="sidenav"></am-sidenav>
+      <!-- END SIDENAV -->
+
+      <div class="content-wrapper" fxFlex="grow" fxLayout="column">
+        <!-- TOOLBAR -->
+        <am-toolbar [quickpanel]="quickpanel"></am-toolbar>
+        <!-- END TOOLBAR -->
+        <!-- CONTENT -->
+        <div class="main-container" #scrollContainer fxFlex="grow">
+          <router-outlet (activate)="onActivate($event, scrollContainer)"></router-outlet>
+        </div>
+        <!-- END CONTENT -->
+
+        <!-- FOOTER -->
+        <am-footer></am-footer>
+        <!-- END FOOTER -->
+      </div>
+
+    </div>
+  </mat-drawer-content>
+
+
+</mat-drawer-container>
